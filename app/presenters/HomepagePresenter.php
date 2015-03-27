@@ -22,6 +22,10 @@ class HomepagePresenter extends BasePresenter {
         $next->add(new DateInterval('P1M'));
         $this->template->previous = $previous->format('Ymd');
         $this->template->next = $next->format('Ymd');
+
+        $db = $this->context->database;
+        $this->template->people = $db->table('people')->fetchPairs('id', 'name');
+
     }
 
     public function createComponentShiftFormsContainer() {

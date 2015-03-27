@@ -1,6 +1,7 @@
 // po načtení stránky
 $(function () {
     recolor();
+    legend();
     // odeslání na formulářích
     $("form").submit(function () {
         $(this).ajaxSubmit();
@@ -27,6 +28,12 @@ var colors = [
     '#4477AA','#44AAAA','#44AA77','#AAAA44','#AA7744','#AA4455','#AA4488',
     '#114477','#117777','#117744','#777711','#774411','#771122','#771155'
 ];
+
+function legend() {
+    for (var i=1; i<=21; i++) {
+        $(".color" + i).css("background-color", colors[i]);
+    }
+}
 
 function recolor() {
     var lastVal;
