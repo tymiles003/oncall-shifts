@@ -3,7 +3,7 @@
 <table>
     <tbody>
         <tr>
-        <th>{$date->format('F')}</th>
+        <th>{$date->format('F Y')}</th>
         <td n:foreach="$hours as $hour">{str_pad($hour, 2, 0, STR_PAD_LEFT)}-{str_pad($hour+1, 2, 0, STR_PAD_LEFT)}</td>
         </tr>
         <tr n:foreach="$days as $day">
