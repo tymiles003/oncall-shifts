@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<meta name="description" content="Nette Framework web application skeleton">
+		<meta name="robots" content="{$robots}" n:ifset="$robots">
+
+		<title> Netapp OCD Shift Schedule</title>
+
+		<link type="text/css" href="{$basePath}/css/custom-theme/jquery-ui-1.8.18.custom.css" rel="stylesheet" />
+		<link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/screen.css" type="text/css">
+		<link rel="stylesheet" media="print" href="{$basePath}/css/print.css" type="text/css">
+		<link rel="shortcut icon" href="{$basePath}/favicon.ico" type="image/x-icon">
+		<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Trocchi' rel='stylesheet' type='text/css'>
+
+		<script type="text/javascript" src="{$basePath}/js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="{$basePath}/js/jquery.nette.js"></script>
+		<script type="text/javascript" src="{$basePath}/js/jquery.ajaxform.js"></script>
+		<script type="text/javascript" src="{$basePath}/js/netteForms.js"></script>
+		<script type="text/javascript" src="{$basePath}/js/livequery.js"></script>
+		<script type="text/javascript" src="{$basePath}/js/scripts.js"></script>
+
+	{block head}{/block}
+	</head>
+
+	<body>
+		<div id="headPanel">
+			{control sign}
+			<div id="header">
+				<h1>Shift Schedule</h1>
+				<b></b>
+			</div>
+		</div>
+		<div id="contentPanel">
+			<div n:foreach="$flashes as $flash" class="flash {$flash->type}">
+				{$flash->message}
+			</div>
+			{include #content}
+		</div>
+	</body>
+</html>

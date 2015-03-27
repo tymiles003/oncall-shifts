@@ -1,0 +1,22 @@
+{block content}
+
+<table>
+    <tbody>
+        <tr>
+        <th>{$date->format('F')}</th>
+        <td n:foreach="$hours as $hour">{str_pad($hour, 2, 0, STR_PAD_LEFT)}-{str_pad($hour+1, 2, 0, STR_PAD_LEFT)}</td>
+        </tr>
+        <tr n:foreach="$days as $day">
+        <th n:class="$day->format('D'), $day == $date ? selected">{$day|date:'d. D'}</th>
+        <td n:foreach="$hours as $hour">
+            {var $dayString = $day->setTime($hour, 0)->format('Y_m_d_H')}
+            {control shiftFormsContainer-$dayString}
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<a n:href="this $previous">Previous month</a>
+<a n:href="this $next">Next month</a>
+
+{/block}

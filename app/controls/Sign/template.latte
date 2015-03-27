@@ -1,0 +1,14 @@
+<div class="userBox">
+{if $presenter->user->isLoggedIn()}
+	<span>{$userIdentity->data['username']}</span><br/>
+	<a n:href="logOut!">Log out</a>
+{else}
+	{form signInForm}
+		<div class="inputBox">
+			{input username class => signInput, placeholder => "Username"}
+			{input password class => signInput, placeholder => "Password"}
+		</div>
+		{input send class => signButton, value => "Sign In"}
+	{/form}
+{/if}
+</div>

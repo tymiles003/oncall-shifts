@@ -1,0 +1,5 @@
+temp
+log
+app/config/config.neon
+libs/Nette2
+www/adminer

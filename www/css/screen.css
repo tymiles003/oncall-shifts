@@ -1,0 +1,56 @@
+body {
+}
+
+input[checked=checked], input[checked=checked] + label {
+	background: lightgreen;
+}
+
+select {
+	width: 50px;
+	background: lightgreen;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+#contentPanel > table > tbody > tr > th,
+#contentPanel > table > tbody > tr > td {
+	border-bottom: solid 1px #DDD;
+	border-top: solid 1px #DDD;
+}
+
+#contentPanel > table > tbody > tr > th {
+	border-right: solid 2px #DDD;
+	text-align: left;
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+#contentPanel > table {
+	border: solid 2px #AAA;
+}
+
+#contentPanel > table > tbody > tr > th.Sun,
+#contentPanel > table > tbody > tr > th.Sat {
+	background-color: #EEE;
+}
+
+#contentPanel > table > tbody > tr > th.Sun {
+	border-bottom: solid 2px #BBB;
+}
+
+
+#contentPanel > table > tbody > tr > th.selected {
+	background-color: #FFA;
+}
+
+.userBox {
+	float: right;
+}
+
+h1 {
+	font-size: 1.1em;
+	color: #000066;
+	font-family: 'Trocchi', serif;
+}
