@@ -9,3 +9,8 @@ A quick and dirty pragmatic project.
 - Create MySQL database with schema from app/models/schema.sql
 - Create app/config/config.neon from example in the same dir
 
+##Screenshot
+
+![Screenshot](screenshot.png?raw=true)
+
+
