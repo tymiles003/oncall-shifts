@@ -29,7 +29,7 @@ class HomepagePresenter extends BasePresenter {
         $people = $db->table('people')->fetchPairs('id', 'name');
         foreach ($people as $id => $name) {
             preg_match_all('#(?<=\s|\b)\pL#u', $name, $initials);
-            $people[$id] = implode('', $initials[0]) . " $name";
+            $people[$id] = implode('', $initials[0]) . "   $name";
         }
         foreach ($db->table('shifts') as $shift) {
             $shifts[$shift->day_hour->__toString()] = $shift;

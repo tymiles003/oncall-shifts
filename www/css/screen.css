@@ -7,7 +7,7 @@ input[checked=checked], input[checked=checked] + label {
 
 select {
 	width: 50px;
-	background: lightgreen;
+	background: white;
 }
 
 table {
