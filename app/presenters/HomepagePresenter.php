@@ -35,6 +35,7 @@ class HomepagePresenter extends BasePresenter {
             preg_match_all('#(?<=\s|\b)\pL#u', $name, $initials);
             $people[$id] = implode('', $initials[0]) . "   $name";
         }
+        $shifts = array();
         foreach ($db->table('shifts') as $shift) {
             $shifts[$shift->day_hour->__toString()] = $shift;
         }
